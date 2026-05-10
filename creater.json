@@ -1,0 +1,9 @@
+{
+    "compiler": "g++",
+    "output_name": "sheep_jump",
+    "std": "-std=c++17",
+    "source_files": ["main.cpp"],
+    "inc_flags": ["-g", "-I.", "-I/opt/homebrew/include"], 
+    "lib_flags": ["-L/opt/homebrew/lib"],
+    "libraries": ["-lSDL2", "-lSDL2_ttf", "-lSDL2_image", "-lSDL2_mixer"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "sheepjumppygame-plus-plus",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "lite-server"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

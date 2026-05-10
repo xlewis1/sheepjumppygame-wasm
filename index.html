@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Sheep Jump! 🐑</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 100%);
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      #game-container {
+        position: relative;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #000;
+        border: 8px solid white;
+      }
+
+      canvas {
+        display: block;
+        max-width: 100vw;
+        max-height: 90vh;
+        cursor: pointer;
+      }
+
+      #ui {
+        margin-top: 15px;
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      .status-text {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background: rgba(255,255,255,0.5);
+        padding: 5px 15px;
+        border-radius: 20px;
+      }
+
+      /* Simple loading spinner */
+      #loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="game-container">
+      <div id="loading">Loading Sheep...</div>
+      <canvas id="canvas" oncontextmenu="event.preventDefault()" tabindex="-1"></canvas>
+    </div>
+
+    <div id="ui">
+      <div id="status" class="status-text">Ready to Play</div>
+      <p>Use <b>Arrow Keys</b> or <b>Gamepad</b> to Jump!</p>
+    </div>
+
+    <script type='text/javascript'>
+      var statusElement = document.getElementById('status');
+      var loadingElement = document.getElementById('loading');
+
+      var Module = {
+        canvas: document.getElementById('canvas'),
+        setStatus: function(text) {
+          if (!text) {
+              statusElement.style.display = 'none';
+              loadingElement.style.display = 'none';
+          } else {
+              statusElement.innerHTML = text;
+          }
+        },
+        print: function(text) { console.log(text); }
+      };
+    </script>
+    
+    <script async type="text/javascript" src="index.js"></script>
+    
+  </body>
+</html>

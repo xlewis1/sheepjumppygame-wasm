@@ -4,3 +4,7 @@ node_modules/
 *.dSYM/
 .DS_Store
 sheep_jump
+creater.json
+sheep_jump
+node_modules/
+.DS_Store

@@ -3,3 +3,4 @@ PygamePP.h
 node_modules/
 *.dSYM/
 .DS_Store
+sheep_jump

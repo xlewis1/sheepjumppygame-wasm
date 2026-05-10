@@ -1,0 +1,5 @@
+main.cpp
+PygamePP.h
+node_modules/
+*.dSYM/
+.DS_Store
